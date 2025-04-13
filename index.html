@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+
+        <div class="form-section profile-picture-section">
+            <h2>Profile Picture</h2>
+            <input type="file" id="profile-picture">
+            <img id="profile-preview" src="#" alt="Profile Preview" style="display: none;">
+        </div>
+
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Phone">
+            <textarea id="summary" placeholder="Summary"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Experience</h2>
+            <div id="experience-fields">
+                <div class="experience-item">
+                    <input type="text" class="company" placeholder="Company">
+                    <input type="text" class="position" placeholder="Position">
+                    <textarea class="description" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <button id="add-experience">Add Experience</button>
+        </div>
+
+        <div class="form-section">
+            <h2>Education</h2>
+            <div id="education-fields">
+                <div class="education-item">
+                    <input type="text" class="school" placeholder="School">
+                    <input type="text" class="degree" placeholder="Degree">
+                    <input type="text" class="year" placeholder="Year">
+                </div>
+            </div>
+            <button id="add-education">Add Education</button>
+        </div>
+
+        <div class="form-section">
+            <h2>Skills</h2>
+            <div id="skills-fields">
+                <input type="text" class="skill" placeholder="Skill">
+            </div>
+            <button id="add-skill">Add Skill</button>
+        </div>
+
+        <div class="form-section">
+            <h2>Projects</h2>
+            <div id="projects-fields">
+                <div class="project-item">
+                    <input type="text" class="project-name" placeholder="Project Name">
+                    <textarea class="project-description" placeholder="Project Description"></textarea>
+                </div>
+            </div>
+            <button id="add-project">Add Project</button>
+        </div>
+
+        <div class="form-section">
+            <h2>Certificates</h2>
+            <div id="certificates-fields">
+                <input type="text" class="certificate" placeholder="Certificate Name">
+            </div>
+            <button id="add-certificate">Add Certificate</button>
+        </div>
+
+        <button id="generate-resume">Generate Resume</button>
+
+        <div id="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="resume-content"></div>
+            <button id="download-resume">Download Resume</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
